@@ -246,4 +246,77 @@ h4 {
  hero section style start 
 ------------------------- */
 
-/* @media(max-width) */
+@media (max-width: 1250px){
+  .container{
+    padding: 0 6rem;
+  }
+html{
+  font-size: 56.25%;
+}
+}
+@media (max-width: 980px){
+  .container{
+    max-width: 96rem;
+  }
+  .section-hero .grid-two-column{
+    grid-template-columns: 1fr;
+  }
+  .section-hero .hero-icons .grid-two-column{
+    grid-template-columns: 1fr 1fr;
+  }
+  .navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(100%);
+    transition: all 0.3s linear;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+  .navbar ,.navbar-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .navbar-link{
+    color: var(--white);
+  }
+  .mobile-navbar-btn{
+    display: block;
+  }
+  .active .navbar{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(0);
+  }
+  .active .mobile-navbar-btn.mobile-nav-icon.mobile-nav-icon[name="close"]{
+    display: block;
+    columns: var(--white);
+  }
+  .active .mobile-navbar-btn.mobile-nav-icon.mobile-nav-icon[name="menu"]{
+    display: none;
+    columns: var(--white);
+  }
+  .section::before{
+    height: 30%;
+  }
+  .hero-image img{
+    width: 60%;
+  }
+  .hero-image .hero-img-overlay{
+    width: 90%;
+    left: 0;
+  }
+}
